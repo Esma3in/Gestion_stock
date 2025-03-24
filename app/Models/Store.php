@@ -12,7 +12,6 @@ use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 class Store extends Model {
     use HasFactory ;
 
-    protected $table = 'stores';
 
     protected $fillable =[
         'name',

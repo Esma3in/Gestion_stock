@@ -11,8 +11,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Transaction extends Model
 {
     use HasFactory;
-    
-    protected $table = 'transactions';
+
 
     protected $fillable = [
         'customers_id',
@@ -23,7 +22,6 @@ class Transaction extends Model
         'transaction_date', // À ajouter dans votre migration
     ];
 
-    // Relation polymorphique
     public function transiable(): MorphTo {
         return $this->morphTo();
     }
@@ -31,7 +29,7 @@ class Transaction extends Model
     public function customer(): BelongsTo {
         return $this->belongsTo(Customers::class, 'customers_id');
     }
-    
+
     public function supplier(): BelongsTo {
         return $this->belongsTo(Suppliers::class, 'suppliers_id');
     }

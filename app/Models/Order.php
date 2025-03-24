@@ -10,7 +10,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Order extends Model
 {
     use HasFactory;
-    
+
 
     protected $fillable = [
         'customers_id',
@@ -18,7 +18,6 @@ class Order extends Model
         'type'
     ];
 
-    protected $table = 'orders';
 
     // Correction: Relation Many-to-Many avec Products
     public function products(): BelongsToMany {

@@ -10,7 +10,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 class Stock extends Model {
     use HasFactory;
 
-    protected $table = 'stocks';
 
     protected $fillable = [
         'stock',
